@@ -1,0 +1,1 @@
+[![Build Status](https://jotieman.visualstudio.com/jotieman/_apis/build/status/jeremytieman.starship?branchName=master)](https://jotieman.visualstudio.com/jotieman/_build/latest?definitionId=2&branchName=master)
