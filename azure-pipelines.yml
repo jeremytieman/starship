@@ -33,3 +33,6 @@ jobs:
   #    azureSubscription: 'LostJedi'
   #    WebAppName: 'starship-lostjedi'
   #    Package: $(Build.ArtifactStagingDirectory)/**/*.zip
+  - task: PublishPipelineArtifact@1
+    inputs:
+      artifactName: 'drop'
