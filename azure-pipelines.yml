@@ -21,7 +21,7 @@ jobs:
       projects: "**/*.csproj"
       arguments: "--configuration $(buildConfiguration)"
   - task: DotNetCoreCLI@2
-    displayName: Publish
+    displayName: Package
     inputs:
       command: publish
       publishWebProjects: True
@@ -34,5 +34,7 @@ jobs:
   #    WebAppName: 'starship-lostjedi'
   #    Package: $(Build.ArtifactStagingDirectory)/**/*.zip
   - task: PublishPipelineArtifact@1
+    displayName: Publish
     inputs:
       artifactName: 'drop'
+      targetPath: $(Build.ArtifactStagingDirectory)/**/*.zip
