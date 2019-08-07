@@ -27,3 +27,8 @@ jobs:
       publishWebProjects: True
       arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
       zipAfterPublish: True
+  - task: AzureRmWebAppDeployment@3
+    inputs:
+      azureSubscription: 'LostJedi'
+      WebAppName: 'starship-lostjedi'
+      Package: $(Build.ArtifactStagingDirectory)/**/*.zip
